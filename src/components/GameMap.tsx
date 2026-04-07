@@ -31,8 +31,8 @@ function MapFollower({ lat, lng }: { lat: number; lng: number }) {
 export default function GameMap({
   playerLat, playerLng, accuracy, spawns, chests, onCreatureTap, onChestTap,
 }: Props) {
-  const lat = playerLat || 40.7128;
-  const lng = playerLng || -74.006;
+  const lat = playerLat || 36.1058;
+  const lng = playerLng || -86.8295;
 
   return (
     <MapContainer

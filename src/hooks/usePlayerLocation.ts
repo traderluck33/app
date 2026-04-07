@@ -1,9 +1,9 @@
 'use client';
 import { useState, useEffect } from 'react';
 
-// Default fallback: New York City
-const DEFAULT_LAT = 40.7128;
-const DEFAULT_LNG = -74.006;
+// Default fallback: 3421 Richards St, Nashville TN 37215
+const DEFAULT_LAT = 36.1058;
+const DEFAULT_LNG = -86.8295;
 
 interface LocationState {
   lat: number | null;
