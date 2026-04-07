@@ -1,6 +1,6 @@
 node_modules/
 .next/
-data/game.db
+data/
 .env.local
 *.tsbuildinfo
 next-env.d.ts
