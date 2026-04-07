@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'leaflet/dist/leaflet.css';
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #1a1a2e;
+  color: #eee;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: #1a1a2e;
+}
+
+/* Player marker pulse */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(2.5); opacity: 0.3; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.player-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Creature marker bounce */
+@keyframes bounce-in {
+  0% { transform: scale(0); }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.creature-bounce {
+  animation: bounce-in 0.4s ease-out;
+}
+
+/* Catch animations */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+}
+.wiggle {
+  animation: wiggle 0.5s ease-in-out 3;
+}
+
+@keyframes catch-success {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(0); opacity: 0; }
+}
+.catch-success {
+  animation: catch-success 0.8s ease-in forwards;
+}
+
+@keyframes float-up {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-60px); opacity: 0; }
+}
+.float-up {
+  animation: float-up 1s ease-out forwards;
+}
+
+/* Chest glow */
+@keyframes chest-glow {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.4)); }
+  50% { filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.8)); }
+}
+.chest-glow {
+  animation: chest-glow 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1.2) rotate(180deg); opacity: 1; }
+  100% { transform: scale(0) rotate(360deg); opacity: 0; }
+}
+.sparkle {
+  animation: sparkle 0.8s ease-in-out;
+}
+
+/* In-range glow for creatures */
+.in-range {
+  filter: drop-shadow(0 0 8px rgba(0, 255, 100, 0.6));
+}
+.out-of-range {
+  opacity: 0.6;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+}
